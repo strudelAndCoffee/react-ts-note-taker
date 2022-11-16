@@ -52,12 +52,12 @@ function App() {
   return (
     <Container className='my-4'>
       <Routes>
-        <Route path='/' element={} />
+        <Route path='/' element={<h1>Hi</h1>} />
         <Route path='/new' element={<NewNote onSubmit={onCreateNote} onAddTag={addTag} availableTags={tags} />} />
-        <Route path='/:id'>
-          <Route index element={} />
-          <Route path='/edit' element={} />
-        </Route>
+        {/* <Route path='/:id'>
+          <Route index element={<></>} />
+          <Route path='/edit' element={<></>} />
+        </Route> */}
         <Route path='*' element={<Navigate to='/' />}/>
       </Routes>
     </Container>
